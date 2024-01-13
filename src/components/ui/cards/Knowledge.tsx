@@ -16,9 +16,12 @@ const Knowledge = (props: Props) => {
           {subjects.length > 0 &&
             subjects.map((sub, i) => {
               return (
-                <Badge className="px-2 rounded-md" key={i} color="gold">
+                <span
+                  className="badge badge-outline-primary text-black"
+                  key={i}
+                >
                   {sub}
-                </Badge>
+                </span>
               );
             })}
         </div>

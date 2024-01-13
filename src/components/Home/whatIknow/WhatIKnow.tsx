@@ -9,6 +9,10 @@ const WhatIKnow = (props: Props) => {
     <Container headingName={"What I Know"}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
         <Knowledge
+          knowledgeName={"Programming Language"}
+          subjects={["Javascript", "Typescript", "Python", "Rust"]}
+        />
+        <Knowledge
           knowledgeName={"Frontend"}
           subjects={["Javascript", "Typescript", "React", "Next.js"]}
         />
@@ -18,10 +22,7 @@ const WhatIKnow = (props: Props) => {
         />
         <Knowledge knowledgeName={"Database"} subjects={["MySql", "MongoDB"]} />
 
-        <Knowledge
-          knowledgeName={"Web3"}
-          subjects={["Solidity", "Rust", "Hardhat"]}
-        />
+        <Knowledge knowledgeName={"Web3"} subjects={["Solidity", "Hardhat"]} />
 
         <Knowledge knowledgeName={"DevOps"} subjects={["Docker", "CI/CD"]} />
       </div>

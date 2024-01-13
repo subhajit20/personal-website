@@ -8,6 +8,7 @@ import MyIntro from "./Bio/MyIntro";
 import Button from "../ui/button/Button";
 import Project from "./Project/Project";
 import WhatIKnow from "./whatIknow/WhatIKnow";
+import Navbar from "../Nav/Navbar";
 
 let intro1 =
   "Meet Subhajit Ghosh, a dynamic individual residing in the vibrant city of Kolkata, India. Subhajit holds a degree in Bachelor of Computer Application, graduating in 2023. During his academic journey, he honed his skills through two impactful internships in the realm of software engineering.";
@@ -21,6 +22,9 @@ let intro3 =
 const HomePage = () => {
   return (
     <div className="homepage">
+      <div>
+        <Navbar />
+      </div>
       <div className="banner flex justify-center items-start">
         <BannerImage image={space} height={500} width={800} />
       </div>
@@ -29,10 +33,11 @@ const HomePage = () => {
       </div>
       <div className="name pt-2">
         <h4 className="text-center text-black text-3xl font-bold">
-          Subhajit Ghosh
+          Subhajit Ghosh <br />{" "}
+          <p className="text-base text-gray-400">(Open Source Contributor)</p>
         </h4>
       </div>
-      <div className="icons">
+      <div className="icons hidden md:block">
         <IconLine />
       </div>
       <div className="email flex justify-center py-2 text-black">
