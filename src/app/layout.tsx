@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import "@radix-ui/themes/styles.css";
+import ContextProvider from "@/context/ContextProvider";
 
 const inter = Poppins({ weight: "400", preload: false });
 
@@ -17,7 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ContextProvider>{children}</ContextProvider>
+      </body>
     </html>
   );
 }

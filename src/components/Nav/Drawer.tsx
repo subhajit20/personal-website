@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useContext, useEffect } from "react";
 import Bars from "../ui/Icons/self_made_icon/Bars";
 import {
   GitHubLogoIcon,
@@ -6,13 +7,15 @@ import {
   InstagramLogoIcon,
   SunIcon,
 } from "@radix-ui/react-icons";
-import XIcon, { WhiteX } from "../ui/Icons/self_made_icon/XIcon";
-import Link from "next/link";
+import { WhiteX } from "../ui/Icons/self_made_icon/XIcon";
 import { EnvelopeIcon } from "@heroicons/react/16/solid";
+import useChangeTheme from "@/hooks/useChangeTheme";
 
 type Props = {};
 
 const Drawer = (props: Props) => {
+  const { changeTheme } = useChangeTheme();
+
   return (
     <div className="dropdown">
       <input type="checkbox" id="drawer-left" className="drawer-toggle" />
@@ -21,7 +24,7 @@ const Drawer = (props: Props) => {
         <Bars />
       </label>
       <label className="btn hidden md:block justify-self-end">
-        <SunIcon className="text-black scale-[1.5]" />
+        <SunIcon className="text-black scale-[1.5]" onClick={changeTheme} />
       </label>
       <label className="overlay" htmlFor="drawer-left"></label>
       <div className="drawer">
@@ -69,7 +72,7 @@ const Drawer = (props: Props) => {
               <InstagramLogoIcon className="scale-[1.7]" /> Instagram
             </a>
             <button className="btn justify-self-start">
-              <SunIcon className="scale-[2]" />
+              <SunIcon className="scale-[2]" onClick={changeTheme} />
             </button>
             ​
           </div>
