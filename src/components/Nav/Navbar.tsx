@@ -5,7 +5,7 @@ type Props = {};
 
 const Navbar = (props: Props) => {
   return (
-    <div className="navbar rounded-lg">
+    <div className="navbar rounded-lg bg-white">
       <div className="navbar-start">
         <a className="navbar-item text-lg md:text-xl text-blue-950">
           Subhajit Ghosh
