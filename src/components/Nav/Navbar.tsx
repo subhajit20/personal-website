@@ -12,10 +12,8 @@ const Navbar = (props: Props) => {
         </a>
       </div>
       <div className="navbar-end">
-        <div className="avatar avatar-ring avatar-md">
-          <div className="dropdown-container">
-            <Drawer />
-          </div>
+        <div className="dropdown-container">
+          <Drawer />
         </div>
       </div>
     </div>
