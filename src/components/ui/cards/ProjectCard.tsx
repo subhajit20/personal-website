@@ -17,7 +17,7 @@ const ProjectCard = (props: Props) => {
     >
       <div className="card card-image-cover ">
         <Image src={props.projectImage} alt="" width={400} height={100} />
-        <div className="card-body h-32">
+        <div className="card-body h-32 bg-white">
           <h2 className="card-header font-extrabold">{props.projectName}</h2>
           <p className="text-gray-400 w-full">{props.projectDependencies}</p>
         </div>
