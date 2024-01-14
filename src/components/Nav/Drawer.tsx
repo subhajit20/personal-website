@@ -20,10 +20,13 @@ const Drawer = (props: Props) => {
     <div className="dropdown">
       <input type="checkbox" id="drawer-left" className="drawer-toggle" />
 
-      <label htmlFor="drawer-left" className="btn block md:hidden">
+      <label
+        htmlFor="drawer-left"
+        className="btn block md:hidden bg-white text-black"
+      >
         <Bars />
       </label>
-      <label className="btn hidden md:block justify-self-end">
+      <label className="btn hidden md:block justify-self-end bg-white text-black">
         <SunIcon className="text-black scale-[1.5]" onClick={changeTheme} />
       </label>
       <label className="overlay" htmlFor="drawer-left"></label>

@@ -53,10 +53,10 @@ const HomePage = () => {
         <Button btnName="Get My Resume" />
       </div>
       <MyIntro intro1={intro1} intro2={intro2} intro3={intro3} />
+      <Exp />
       <WhatIKnow />
       <Project />
       <Edu />
-      <Exp />
       <Footer />
     </div>
   );
