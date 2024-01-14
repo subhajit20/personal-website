@@ -11,6 +11,7 @@ import WhatIKnow from "./whatIknow/WhatIKnow";
 import Navbar from "../Nav/Navbar";
 import Edu from "./education/Edu";
 import Exp from "./Experience/Exp";
+import Footer from "./footer/Footer";
 
 let intro1 =
   "Meet Subhajit Ghosh, a dynamic individual residing in the vibrant city of Kolkata, India. Subhajit holds a degree in Bachelor of Computer Application, graduating in 2023. During his academic journey, he honed his skills through two impactful internships in the realm of software engineering.";
@@ -56,6 +57,7 @@ const HomePage = () => {
       <Project />
       <Edu />
       <Exp />
+      <Footer />
     </div>
   );
 };

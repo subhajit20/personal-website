@@ -12,12 +12,12 @@ const Knowledge = (props: Props) => {
     <div className="card bg-gray-300 text-black justify-self-center md:justify-self-center">
       <div className="card-body">
         <h2 className="card-header">{props.knowledgeName}</h2>
-        <div className="card-footer">
+        <div className="flex gap-4 flex-wrap">
           {subjects.length > 0 &&
             subjects.map((sub, i) => {
               return (
                 <span
-                  className="badge badge-outline-primary text-black"
+                  className="badge badge-outline-primary text-black justify-self-start"
                   key={i}
                 >
                   {sub}
