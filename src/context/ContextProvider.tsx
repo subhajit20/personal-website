@@ -7,7 +7,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-export const appContext = createContext(null);
+export const appContext = createContext();
 
 const ContextProvider = (props: Props) => {
   const [state, dispatch] = useReducer(reducer, Modes);
