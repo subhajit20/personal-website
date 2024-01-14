@@ -9,7 +9,7 @@ type Props = {
 const Knowledge = (props: Props) => {
   const { subjects } = props;
   return (
-    <div className="card bg-gray-300 text-black">
+    <div className="card bg-gray-300 text-black justify-self-center md:justify-self-center">
       <div className="card-body">
         <h2 className="card-header">{props.knowledgeName}</h2>
         <div className="card-footer">

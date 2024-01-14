@@ -7,7 +7,7 @@ type Props = {};
 const WhatIKnow = (props: Props) => {
   return (
     <Container headingName={"What I Know"}>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 justify-center gap-2">
         <Knowledge
           knowledgeName={"Programming Language"}
           subjects={["Javascript", "Typescript", "Python", "Rust"]}

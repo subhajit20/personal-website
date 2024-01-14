@@ -11,7 +11,10 @@ type Props = {
 
 const ProjectCard = (props: Props) => {
   return (
-    <Link href={props.projectGithubLink}>
+    <Link
+      href={props.projectGithubLink}
+      className="justify-self-center md:justify-self-center"
+    >
       <div className="card card-image-cover ">
         <Image src={props.projectImage} alt="" width={400} height={100} />
         <div className="card-body h-32">
