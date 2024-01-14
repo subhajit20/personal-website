@@ -12,7 +12,7 @@ const Navbar = (props: Props) => {
         </a>
       </div>
       <div className="navbar-end">
-        <div className="dropdown-container">
+        <div className="dropdown-container bg-white text-black">
           <Drawer />
         </div>
       </div>
