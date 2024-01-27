@@ -8,7 +8,7 @@ type Props = {};
 const Edu = (props: Props) => {
   return (
     <Container headingName={"Education"}>
-      <div className="p-2 education">
+      <div className="p-2 education grid grid-cols-1 gap-y-3">
         <EducatioCard
           collegeName={"Techno Inida University"}
           description={

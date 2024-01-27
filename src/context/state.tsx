@@ -2,7 +2,7 @@ import { useReducer } from "react";
 
 export let Modes = {
   dark: false,
-  light: false,
+  light: true,
   color: "bg-black text-white",
 };
 

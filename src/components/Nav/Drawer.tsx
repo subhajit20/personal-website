@@ -6,15 +6,22 @@ import {
   LinkedInLogoIcon,
   InstagramLogoIcon,
   SunIcon,
+  MoonIcon,
 } from "@radix-ui/react-icons";
 import { WhiteX } from "../ui/Icons/self_made_icon/XIcon";
 import { EnvelopeIcon } from "@heroicons/react/16/solid";
 import useChangeTheme from "@/hooks/useChangeTheme";
+import { appContext } from "@/context/ContextProvider";
 
 type Props = {};
 
 const Drawer = (props: Props) => {
   const { changeTheme } = useChangeTheme();
+  const { state }: any = useContext(appContext);
+
+  useEffect(() => {
+    console.log(state);
+  }, [state]);
 
   return (
     <div className="dropdown">
@@ -27,7 +34,12 @@ const Drawer = (props: Props) => {
         <Bars />
       </label>
       <label className="btn hidden md:block justify-self-end bg-white text-black">
-        <SunIcon className="text-black scale-[1.5]" onClick={changeTheme} />
+        {state.dark && (
+          <SunIcon className="text-black scale-[1.5]" onClick={changeTheme} />
+        )}
+        {state.light && (
+          <MoonIcon className="text-black scale-[2]" onClick={changeTheme} />
+        )}
       </label>
       <label className="overlay" htmlFor="drawer-left"></label>
       <div className="drawer">
@@ -75,7 +87,18 @@ const Drawer = (props: Props) => {
               <InstagramLogoIcon className="scale-[1.7]" /> Instagram
             </a>
             <button className="btn justify-self-start">
-              <SunIcon className="scale-[2]" onClick={changeTheme} />
+              {state.dark && (
+                <SunIcon
+                  className="text-white scale-[2]"
+                  onClick={changeTheme}
+                />
+              )}
+              {state.light && (
+                <MoonIcon
+                  className="text-white scale-[2]"
+                  onClick={changeTheme}
+                />
+              )}
             </button>
             ​
           </div>
