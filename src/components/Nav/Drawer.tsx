@@ -29,16 +29,24 @@ const Drawer = (props: Props) => {
 
       <label
         htmlFor="drawer-left"
-        className="btn block md:hidden bg-white text-black"
+        className={`btn flex justify-center md:hidden bg-transparent`}
       >
-        <Bars />
+        <Bars color={state.self_Madeicon} />
       </label>
-      <label className="btn hidden md:block justify-self-end bg-white text-black">
+      <label
+        className={`btn hidden md:flex justify-center justify-self-end bg-transparent`}
+      >
         {state.dark && (
-          <SunIcon className="text-black scale-[1.5]" onClick={changeTheme} />
+          <SunIcon
+            className={`${state.iconColor} scale-[1.5]`}
+            onClick={changeTheme}
+          />
         )}
         {state.light && (
-          <MoonIcon className="text-black scale-[2]" onClick={changeTheme} />
+          <MoonIcon
+            className={`${state.iconColor} text-black scale-[2]`}
+            onClick={changeTheme}
+          />
         )}
       </label>
       <label className="overlay" htmlFor="drawer-left"></label>

@@ -3,7 +3,9 @@ import { useReducer } from "react";
 export let Modes = {
   dark: false,
   light: true,
-  color: "bg-black text-white",
+  color: "bg-white text-black",
+  iconColor: "text-black",
+  self_Madeicon: "black",
 };
 
 export const reducer = (state = Modes, action: any) => {
@@ -13,12 +15,18 @@ export const reducer = (state = Modes, action: any) => {
         ...state,
         dark: true,
         light: false,
+        color: "bg-black text-white",
+        iconColor: "text-white",
+        self_Madeicon: "white",
       };
     case "LIGHT":
       return {
         ...state,
         dark: false,
         light: true,
+        color: "bg-white text-black",
+        iconColor: "text-black",
+        self_Madeicon: "black",
       };
   }
 };
