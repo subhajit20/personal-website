@@ -13,7 +13,7 @@ const Navbar = (props: Props) => {
   }, [state]);
   return (
     <div
-      className={`navbar w-full md:max-w-[50rem] navbar-floating transition-all duration-500 ease-in-out ${state.color} bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10
+      className={`navbar w-full md:max-w-[50rem] navbar-floating transition-all duration-500 ease-in-out ${state.color} bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border-2 border-black
       `}
     >
       <div className="navbar-start">

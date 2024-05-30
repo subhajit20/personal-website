@@ -48,10 +48,10 @@ const WhatIKnow = (props: Props) => {
   const [currentComponent,setCurrentComponent] = useState<number>(0);
 
   const technoloyComponents = useMemo<React.JSX.Element[]>(()=> [
-    <FrontEnd />,
-    <BackEnd />,
-    <Database />,
-    <Web3 />
+    <FrontEnd key={0} />,
+    <BackEnd key={1} />,
+    <Database key={2} />,
+    <Web3 key={3} />
   ],[]);
 
 
