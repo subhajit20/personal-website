@@ -14,14 +14,14 @@ const Edu = (props: Props) => {
           description={
             "I have graduated with Computer Application degree with over 8.89 cgpa."
           }
-          start={"01-01-2021"}
-        />
+          start={"14/06/2023"}
+          />
         <EducatioCard
           collegeName={"Kanchrapara Harnett High School"}
           description={
             "I have done my higher secondary examination with Computer Application subject and my total marks was 421/500 and Got 90 marks in Computer application out of 100."
           }
-          start={"01-01-2021"}
+          start={"05/07/2019"}
         />
       </div>
     </Container>

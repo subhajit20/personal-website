@@ -1,7 +1,15 @@
 import omegle from "@/assets/projectImages/omegle.webp";
 import TrackOrder from "@/assets/projectImages/trackOrder.webp";
+import MetaMask from "@/assets/projectImages/MetaMask_Fox.png";
 
 export const projects = [
+  {
+    projectName: "Metamask Clone",
+    projectImage: MetaMask,
+    projectDependencies:
+      "Typescript, Next.js, ethers,EtherScan",
+    projectGithubLink: "https://github.com/subhajit20/Crypto-Wallet",
+  },
   {
     projectName: "Full Stack Omegle Clone",
     projectImage: omegle,

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import Drawer from "./Drawer";
 import { appContext } from "@/context/ContextProvider";
+import { FaMoon } from "react-icons/fa";
 
 type Props = {};
 
@@ -12,7 +13,8 @@ const Navbar = (props: Props) => {
   }, [state]);
   return (
     <div
-      className={`navbar transition-all duration-500 ease-in-out ${state.color}`}
+      className={`navbar w-full md:max-w-[50rem] navbar-floating transition-all duration-500 ease-in-out ${state.color} bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10
+      `}
     >
       <div className="navbar-start">
         <a
@@ -20,7 +22,7 @@ const Navbar = (props: Props) => {
             state.dark ? "text-white" : "text-black"
           }`}
         >
-          Subhajit Ghosh
+          <FaMoon />
         </a>
       </div>
       <div className="navbar-end">
