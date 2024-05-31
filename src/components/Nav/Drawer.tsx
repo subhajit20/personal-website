@@ -17,7 +17,7 @@ const Drawer = (props: Props) => {
   const { state }: any = useContext(appContext);
 
   return (
-    <><input type="checkbox" id="drawer-left" className="drawer-toggle" /><label htmlFor="drawer-left" className="text-white"><FaBars /></label><label className="overlay" htmlFor="drawer-left"></label><div className="drawer">
+    <><input type="checkbox" id="drawer-left" className="drawer-toggle" /><label htmlFor="drawer-left" className="text-black"><FaBars className={state.color} /></label><label className="overlay" htmlFor="drawer-left"></label><div className="drawer">
       <div className="drawer-content pt-10 flex flex-col justify-center items-start gap-y-10 h-full">
         <label htmlFor="drawer-left" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
         {/* <div className={``}> */}

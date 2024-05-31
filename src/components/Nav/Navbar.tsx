@@ -17,7 +17,7 @@ const Navbar = (props: Props) => {
             state.dark === true && <GoSun onClick={()=> dispatch({type:"LIGHT"})} className="h-7 w-7" />
           }
           {
-            state.light === true && <FaMoon onClick={()=> dispatch({type:"DARK"})} className="h-7 w-7" />
+            state.light === true && <FaMoon onClick={()=> dispatch({type:"DARK"})} className="h-7 w-7 text-black" />
           }
         </a>
       </div>
