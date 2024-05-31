@@ -1,5 +1,6 @@
+import { appContext } from "@/context/ContextProvider";
 import Image, { StaticImageData } from "next/image";
-import React from "react";
+import React, { useContext } from "react";
 
 type Props = {
   companyIcon: string | StaticImageData;
@@ -9,11 +10,13 @@ type Props = {
 };
 
 const JobCard = (props: Props) => {
+  const { state }: any = useContext(appContext);
+  
   return (
-    <div className="p-2 md:p-5">
+    <div className={`${state.color} p-2 md:p-5 w-full rounded-full`}>
       <div className="flex justify-start gap-x-3 items-center">
         <div className="avatar">
-          <Image src={props.companyIcon} alt="avatar" width={80} height={80} />
+          <Image src={props.companyIcon} alt="avatar" width={100} height={100} />
         </div>
         <div className="justify-self-start flex flex-col w-full ">
           <p className="text-lg">{props.companyName}</p>

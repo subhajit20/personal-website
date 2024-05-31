@@ -1,3 +1,4 @@
+import { appContext } from '@/context/ContextProvider';
 import React from 'react'
 import { IconType } from 'react-icons'
 
@@ -7,12 +8,13 @@ type Props = {
 }
 
 function TechnologySection(props: Props){
+    const { state }: any = React.useContext(appContext);
     const {icons} = props;
   return (
     <div className={`grid grid-cols-3  md:grid-cols-5 justify-evenly items-center gap-x-2 gap-y-5`}>
         {
             icons.length > 0 && icons.map((Icon:IconType,i)=>{
-                return <Icon className='w-11 h-11' key={i} />
+                return <Icon className={`${state.color} w-11 h-11`} key={i} />
             })
         }
       </div>

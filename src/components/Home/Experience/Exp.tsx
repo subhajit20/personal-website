@@ -10,7 +10,7 @@ type Props = {};
 const Exp = (props: Props) => {
   return (
     <Container headingName={"Work History"}>
-      <div className="py-3">
+      <div className="flex flex-col gap-y-3 justify-center items-center">
         <JobCard
           companyIcon={Gaadibuddy}
           companyName={"Gaadibuddy"}

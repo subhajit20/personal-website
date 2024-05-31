@@ -16,6 +16,7 @@ import { FaEthereum } from "react-icons/fa";
 
 import Menu from "@/components/ui/menu/Menu";
 import TechnologySection,{ withDynamicName } from "@/components/ui/technology/TechnologySection";
+import { appContext } from "@/context/ContextProvider";
 
 
 const FrontEnd = withDynamicName<any>(TechnologySection,'Frontend',{number: 1,icons:[
@@ -57,7 +58,7 @@ const WhatIKnow = (props: Props) => {
 
   return (
     <Container headingName={"Technologies"}>
-        <div className="flex justify-center py-3">
+        <div className={`flex justify-center py-3`}>
           <Menu 
             setCurrentComponent={setCurrentComponent}
             menus={[
