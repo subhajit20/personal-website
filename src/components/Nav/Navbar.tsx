@@ -10,7 +10,7 @@ const Navbar = (props: Props) => {
   const { state,dispatch }: any = useContext(appContext);
 
   return (
-    <div className={`navbar navbar-floating rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border bg-black border-gray-600`}>
+    <div className={`navbar navbar-sticky rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border-b-2 bg-black border-gray-600`}>
       <div className="navbar-start">
         <a className="navbar-item">
           {
