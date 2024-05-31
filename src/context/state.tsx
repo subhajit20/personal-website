@@ -5,6 +5,7 @@ export let Modes = {
   light: true,
   color: "bg-white text-black",
   iconColor: "text-black",
+  navicon:"text-black",
   self_Madeicon: "black",
 };
 
@@ -17,6 +18,7 @@ export const reducer = (state = Modes, action: any) => {
         light: false,
         color: "bg-black text-white",
         iconColor: "text-white",
+        navicon:"text-white",
         self_Madeicon: "white",
       };
     case "LIGHT":
@@ -26,6 +28,7 @@ export const reducer = (state = Modes, action: any) => {
         light: true,
         color: "bg-white text-black",
         iconColor: "text-black",
+        navicon:"text-black",
         self_Madeicon: "black",
       };
   }

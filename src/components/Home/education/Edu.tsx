@@ -10,7 +10,7 @@ const Edu = (props: Props) => {
     <Container headingName={"Education"}>
       <div className="p-2 education grid grid-cols-1 gap-y-3">
         <EducatioCard
-          collegeName={"Techno Inida University"}
+          collegeName={"Techno India University"}
           description={
             "I have graduated with Computer Application degree with over 8.89 cgpa."
           }
