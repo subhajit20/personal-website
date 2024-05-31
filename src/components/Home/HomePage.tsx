@@ -9,7 +9,7 @@ import Button from "../ui/button/Button";
 import Project from "./Project/Project";
 import WhatIKnow from "./whatIknow/WhatIKnow";
 import Navbar from "../Nav/Navbar";
-// import UpdatedNavbar from "../Nav/UpdatedNavbar";
+import UpdatedNavbar from "../Nav/UpdatedNavbar";
 import Edu from "./education/Edu";
 import Exp from "./Experience/Exp";
 import Footer from "./footer/Footer";
@@ -32,7 +32,8 @@ const HomePage = () => {
   return (
     <div className={`${state.color} homepage transition-all duration-200 ease-out`}>
       <div>
-        <Navbar />
+        {/* <Navbar /> */}
+        <UpdatedNavbar />
       </div>
       <div className="banner flex justify-center items-start">
         <BannerImage image={space} height={500} width={800} />

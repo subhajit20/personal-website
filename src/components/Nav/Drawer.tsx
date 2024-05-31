@@ -6,9 +6,10 @@ import { CiLinkedin } from "react-icons/ci";
 import { LuInstagram } from "react-icons/lu";
 import { FaEnvelope } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-
 import useChangeTheme from "@/hooks/useChangeTheme";
 import { appContext } from "@/context/ContextProvider";
+import {Button} from "@nextui-org/react";
+
 
 type Props = {};
 
@@ -17,7 +18,14 @@ const Drawer = (props: Props) => {
   const { state }: any = useContext(appContext);
 
   return (
-    <><input type="checkbox" id="drawer-left" className="drawer-toggle" /><label htmlFor="drawer-left" className="text-black"><FaBars className={state.navicon} /></label><label className="overlay" htmlFor="drawer-left"></label><div className="drawer">
+    <><input type="checkbox" id="drawer-left" className="drawer-toggle" />
+    <label htmlFor="drawer-left" className="text-black">
+      <Button color="primary" variant="ghost">
+        <FaBars className={state.navicon} />
+      </Button> 
+      </label>
+    <label className="overlay" htmlFor="drawer-left"></label>
+    <div className="drawer">
       <div className="drawer-content pt-10 flex flex-col justify-center items-start gap-y-10 h-full">
         <label htmlFor="drawer-left" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
         {/* <div className={``}> */}

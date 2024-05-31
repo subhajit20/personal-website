@@ -1,46 +1,97 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { FaEnvelope, FaGithub, FaMoon } from "react-icons/fa";
+import { GoSun } from "react-icons/go";
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
+import { appContext } from "@/context/ContextProvider";
+import { FaBars, FaXTwitter } from "react-icons/fa6";
+import { CiLinkedin } from "react-icons/ci";
+import { LuInstagram } from "react-icons/lu";
+// import {AcmeLogo} from "./AcmeLogo.jsx";
 
-type Props = {}
+export default function UpdatedNavbar() {
+  const { state,dispatch }: any = useContext(appContext);
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-const UpdatedNavbar = (props: Props) => {
+  const menuItems = [
+    "Profile",
+    "Dashboard",
+    "Activity",
+    "Analytics",
+    "System",
+    "Deployments",
+    "My Settings",
+    "Team Settings",
+    "Help & Feedback",
+    "Log Out",
+  ];
+
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-    <div className="container-fluid">
-      <a className="navbar-brand" href="#">Navbar</a>
-      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-          <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Link</a>
-          </li>
-          <li className="nav-item dropdown">
-            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul className="dropdown-menu">
-              <li><a className="dropdown-item" href="#">Action</a></li>
-              <li><a className="dropdown-item" href="#">Another action</a></li>
-              {/* <li><hr className="dropdown-divider" /></li> */}
-              <li><a className="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form className="d-flex" role="search">
-          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-          <button className="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-  )
+    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 bg-black fixed w-full">
+      <NavbarContent>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className=""
+        />
+        <NavbarBrand>
+        </NavbarBrand>
+      </NavbarContent>
+      <NavbarContent justify="end">
+        <NavbarItem className="flex cursor-pointer">
+          {
+            state.dark === true && <GoSun onClick={()=> dispatch({type:"LIGHT"})} className="h-7 w-7 text-white" />
+          }
+          {
+            state.light === true && <FaMoon onClick={()=> dispatch({type:"DARK"})} className="h-7 w-7 text-black" />
+          }
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarMenu className="bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 bg-black ">
+      <div className="drawer-content pt-10 flex flex-col justify-center items-start gap-y-10 h-full">
+            <NavbarMenuItem >
+              <Link
+                className="w-full"
+                href="mailto:subhajitstd07@gmail.com"
+                target="_blank"
+                size="lg"
+                >
+              <FaEnvelope className={`h-11 w-11 text-white`} />
+            </Link>
+            </NavbarMenuItem>
+          <NavbarMenuItem>
+            <Link
+              href="https://github.com/subhajit20"
+              className=" text-black"
+              target="_blank"
+            >
+              <FaGithub className={`h-11 w-11 text-white`} />
+            </Link>
+          </NavbarMenuItem>
+          <NavbarMenuItem>
+            <Link
+              href="https://twitter.com/Subhajit812"
+              className=" text-black"
+              target="_blank"
+            >
+              <FaXTwitter className={`h-11 w-11 text-white`} />
+            </Link>
+          </NavbarMenuItem>
+          <NavbarMenuItem>
+            <Link
+              href="https://www.linkedin.com/in/subhajit-ghosh-6a1aba218/"
+              className=" text-black"
+              target="_blank"
+            >
+              <CiLinkedin className={`h-11 w-11 text-white`} />
+            </Link>
+          </NavbarMenuItem>
+          
+          <NavbarMenuItem>
+            <Link href="https://www.instagram.com/engiexplorer/" className=" text-black" target="_blank">
+              <LuInstagram className={`h-11 w-11 text-white`} />
+            </Link>
+          </NavbarMenuItem>
+          </div>
+      </NavbarMenu>
+    </Navbar>
+  );
 }
-
-export default UpdatedNavbar
